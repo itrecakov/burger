@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row header text-center">
+
+        <img class="img-responsive icon" src="./assets/img/burger.png">
+        <h1>Eat-da-Burger!</h1>
+        <h2>What kind of burger would you like?</h2>
+
+        <p class="instructions">Click the burger to eat any burger. Click the order bell to order
+            more of any burger. If you don't see a burger you want to eat, name your own!</p>
+    </div>
+
+    <div class="row orderup  text-center">
+        <input type="text" class="form-control" id="name" placeholder="I would like a..."><button type="submit"
+            id="submit">Place Order!</button>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <h1 id="left">Order Up!</h1>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="burgerblock">
+                <img src="./assets/img/burger.png" class="tinyicon eaticon" data-id="{{this.id}}">
+                <h2>{{burger_name}}</h2>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+
+        <div class="col-md-6">
+
+            <h1 id="right">Eaten...</h1>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="burgerblock">
+                <img src="./assets/img/more.png" class="tinyicon waitericon" data-id="{{this.id}}">
+                <h2>{{burger_name}}</h2>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <p class="footer"><a href="">GitHub</a></p>
+    </div>
+</div>
