@@ -74,8 +74,6 @@ p.instructions {
 }
 
 p.footer {
-    margin-top: 25px;
-    height: 100px;
+    height: 50px;
     font-size: 10px;
-    background-color: F7CE56;
 }

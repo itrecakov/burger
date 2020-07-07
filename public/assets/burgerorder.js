@@ -5,7 +5,7 @@ $(function () {
         console.log(burgerName);
 
         if (burgerName == "") {
-            alert("You need to tell us what you'd like to order!");
+            alert("What would you like to order?");
         } else {
             $.ajax("/api/burgers", {
                 type: "POST",
